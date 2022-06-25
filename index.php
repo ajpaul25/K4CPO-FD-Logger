@@ -240,7 +240,11 @@ if (document.getElementById("station").value != "" &&
 	document.forms["form"]["call"].focus();
 }
 if (document.getElementById("station").value == "GOTA") {
-	document.getElementById("gota").style.display="inline-block";
+	if (document.getElementById("gota").style.display != "inline-block"){
+		document.getElementById("gotaname").value='';
+		document.getElementById("gota").style.display="inline-block";
+		document.getElementById("gotaname").focus();
+	}
 } else {
 	//document.forms["form"]["gota"].style.display="none";
 	//document.forms["form"]["gota"].value='';
