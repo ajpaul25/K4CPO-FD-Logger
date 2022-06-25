@@ -155,7 +155,7 @@ table {border-collapse: collapse;border: 1px solid #aaa;width:620px;}
 	</form>
 	</td>
 	<td valign="top" align="right" style="width:50%;">
-	<?=ShowKeys();?>
+	<!--<?=ShowKeys();?>-->
 	</td>
 </tr>
 </table>
