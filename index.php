@@ -23,12 +23,12 @@ if (!isset($gotaname))    {$gotaname = "";}
 // Logit!!
 if (isset($submitie)) {
 	if ($station=='GOTA') {
-		$ifgota="-";
+		$ifgota="-".$gotaname;
 	} else {
 		$ifgota="";
 	}
 	if($mysqldb->mysqlnumrows("SELECT * FROM ".DATABASE.".log where station='" . $station . "' and band='" . $band . "' and mode='" . $mode . "' and `call`='" . $call . "'") == 0){
-		$mysqldb->mysqlquery("insert into ".DATABASE.".log (station,band,mode,dt,`call`,class,section) values('".$station.$ifgota.$gotaname."','$band','$mode','".date("Y-m-d H:i:s", strtotime($logclock))."','$call','$class','$section')");
+		$mysqldb->mysqlquery("insert into ".DATABASE.".log (station,band,mode,dt,`call`,class,section) values('".$station.$ifgota."','$band','$mode','".date("Y-m-d H:i:s", strtotime($logclock))."','$call','$class','$section')");
 	}
 }
 $station=CheckCookie('station',$station);
