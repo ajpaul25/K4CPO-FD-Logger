@@ -189,7 +189,7 @@ xmlhttp.onreadystatechange=function()
     {
 	    if (xmlhttp.responseText!="") {
 		    document.getElementById("messagew").innerHTML=xmlhttp.responseText;
-		    playBeep();
+		    //playBeep();
 		   	document.getElementById("call").focus();
 			document.getElementById("call").select(0);
 		} else {
