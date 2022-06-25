@@ -104,8 +104,11 @@ xmlhttp.send();
 
 <style>
 html {font-size:120%;}
-input:focus,select:focus {background-color: yellow;}
-table {border-collapse: collapse;border: 1px solid black;width:620px;}
+body {background:#333; color:#ddd;}
+a {color:#abe;}
+input,select {background-color:#777; color:#eee;}
+input:focus,select:focus {background-color: #880;}
+table {border-collapse: collapse;border: 1px solid #aaa;width:620px;}
 #call,#class {text-transform: uppercase;}
 </style>
 <body>
@@ -131,7 +134,7 @@ table {border-collapse: collapse;border: 1px solid black;width:620px;}
 					</tr>
 					<tr><td><input type=text name=contact id=contact value=<?=$contact;?> size=6 disabled></td>
 						<td><input type=text size=18 name=logclock id='logclock'></td>
-						<td><input type=text name=call id=call size=10 onfocus="getcounts();" onChange="javascript:this.value=this.value.toUpperCase();checkit();" ></td>
+						<td><input type=text name=call id=call size=10 onfocus="getcounts();" onChange="javascript:this.value=this.value.toUpperCase();checkit();" autocomplete="off"></td>
 						<td><input type=text name=class id=class size=5 onchange="javascript:this.value=this.value.toUpperCase();"></td>
 						<td>- <select id=section name=section onchange="ShowName(this.value);"><?=$sectionopt;?></select></td>
 						<td><input type=submit name=submitie id=submitie value='Submit'><input type=reset value='Clear'></td>
